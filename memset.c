@@ -6,16 +6,21 @@
 /*   By: maxenceroels <marvin@42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 00:25:09 by maxencero         #+#    #+#             */
-/*   Updated: 2024/06/26 01:57:52 by maxencero        ###   ########.fr       */
+/*   Updated: 2024/06/29 19:30:15 by mroels           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 void	*ft_memset(void *s, int c, size_t len)
 {
-	while (len > 0)
-	{
-		s[len] = c;
-		len--;
+	int	i;
+
+	i = 0;
+	while (i++ < len)
+	{	
+		*(char*)s = (unsigned char)c;
+		s++;
 	}
 	return (s);
 }
