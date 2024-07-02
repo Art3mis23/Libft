@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxenceroels <marvin@42.fr>                +#+  +:+       +#+        */
+/*   By: mroels <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 12:53:16 by maxencero         #+#    #+#             */
-/*   Updated: 2024/07/03 01:23:52 by mroels           ###   ########.fr       */
+/*   Created: 2024/07/03 01:14:29 by mroels            #+#    #+#             */
+/*   Updated: 2024/07/03 01:30:13 by mroels           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
-{
-	int	len;
+#include <strings.h>
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+void	ft_bzero(void *s, size_t n)
+{
+	while (n--)
+		((unsigned char *)s)[n] = '\0';
 }
