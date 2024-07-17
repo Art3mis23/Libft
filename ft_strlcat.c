@@ -6,7 +6,7 @@
 /*   By: mroels <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:28:50 by mroels            #+#    #+#             */
-/*   Updated: 2024/07/15 14:36:24 by mroels           ###   ########.fr       */
+/*   Updated: 2024/07/17 18:51:14 by mroels           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ size_t	strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	szsrc = 0;
-	while (src[szsrc])
-		szsrc++;
+	szsrc = ft_strlen(src);
+	while (*dst)
+		dst++;
 	if (size > szsrc)
 		size = szsrc;
 	while (i < size && src[i])
 	{
-		dst[i] = src[i];
+		*dst++ = src[i];
 		i++;
 	}
 	dst[i] = '\0';
@@ -37,6 +38,6 @@ size_t	strlcat(char *dst, const char *src, size_t size)
 	char	s1[5] = "Mort";
 	char	s2[4] = "Vie";
 	size_t	sz = 2;
-	strlcpy(s1, s2, sz);
+	strlcat(s1, s2, sz);
 	return (0);
 }*/
