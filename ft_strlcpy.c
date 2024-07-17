@@ -6,7 +6,7 @@
 /*   By: mroels <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:59:09 by mroels            #+#    #+#             */
-/*   Updated: 2024/07/15 14:22:47 by mroels           ###   ########.fr       */
+/*   Updated: 2024/07/17 18:08:26 by mroels           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	strlcpy(char *dst, const char *src, size_t size)
 		szsrc++;
 	if (size > szsrc)
 		size = szsrc;
-	while (i < size && src[i])
+	while (i < (size - 1) && src[i])
 	{
 		dst[i] = src[i];
 		i++;
