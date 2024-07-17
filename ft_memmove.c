@@ -6,9 +6,11 @@
 /*   By: mroels <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 01:44:58 by mroels            #+#    #+#             */
-/*   Updated: 2024/07/14 13:48:55 by mroels           ###   ########.fr       */
+/*   Updated: 2024/07/15 14:25:06 by mroels           ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */#include <string.h>
+/* ************************************************************************** */
+
+#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -16,4 +18,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		((char *)dest)[n] = ((char *)src)[n];
 	return (dest);
 }
-
