@@ -1,16 +1,19 @@
 NAME = Libft.a
 
-SOURCES = ft_bzero.c\
-	     ft_isalnum.c\
-	     ft_isalpha.c\
-	     ft_isascii.c\
-	     ft_isdigit.c\
-	     ft_isprint.c\
-	     ft_memcpy.c\
-	     ft_memmove.c\
-	     ft_memset.c\
-	     ft_strlcpy.c\
-	     ft_strlen.c
+SOURCES = $(wildcard *.c)
+OBJ = $(SRC: .c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
+.PHONY: clean fclean
+
+$(NAME): $(OBJ)
+
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
