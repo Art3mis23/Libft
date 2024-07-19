@@ -8,6 +8,7 @@ FLAGS = -Wall -Wextra -Werror
 .PHONY: clean fclean
 
 $(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 
 clean:
