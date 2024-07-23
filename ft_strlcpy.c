@@ -6,13 +6,13 @@
 /*   By: mroels <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:59:09 by mroels            #+#    #+#             */
-/*   Updated: 2024/07/17 18:08:26 by mroels           ###   ########.fr       */
+/*   Updated: 2024/07/23 12:28:41 by mroels           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	szsrc;
 	size_t	i;
@@ -37,6 +37,6 @@ size_t	strlcpy(char *dst, const char *src, size_t size)
 	char	s1[5] = "Mort";
 	char	s2[4] = "Vie";
 	size_t	sz = 2;
-	strlcpy(s1, s2, sz);
+	ft_strlcpy(s1, s2, sz);
 	return (0);
 }*/

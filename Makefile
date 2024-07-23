@@ -1,15 +1,16 @@
-NAME = Libft.a
+NAME = libft.a
 
-SOURCES = $(wildcard *.c)
-OBJ = $(SRC: .c=.o)
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
 .PHONY: clean fclean
 
+all: $(NAME)
+
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
-
 
 clean:
 	rm -f $(OBJ)
