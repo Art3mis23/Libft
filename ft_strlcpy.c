@@ -6,7 +6,7 @@
 /*   By: mroels <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:59:09 by mroels            #+#    #+#             */
-/*   Updated: 2024/07/23 12:28:41 by mroels           ###   ########.fr       */
+/*   Updated: 2024/08/07 14:53:42 by maxencero        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		szsrc++;
 	if (size > szsrc)
 		size = szsrc;
-	while (i < (size - 1) && src[i])
+	while (i < size && src[i])
 	{
 		dst[i] = src[i];
 		i++;

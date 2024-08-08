@@ -6,7 +6,7 @@
 /*   By: mroels <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 01:44:58 by mroels            #+#    #+#             */
-/*   Updated: 2024/08/06 13:45:32 by mroels           ###   ########.fr       */
+/*   Updated: 2024/08/07 14:46:22 by maxencero        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (0);
 	if (src > dest)
 		ft_memcpy(dest, src, n);
-	else 
+	else
 		while (n--)
 			((char *)dest)[n] = ((char *)src)[n];
 	return (dest);
